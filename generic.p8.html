@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>DC Johnson - Sequencing</title>
+		<title>DC Johnson - Sequencing - Under construction !! </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,7 +43,7 @@
 							<li><a href="mangement.html">Managerial Experience</a></li>
 							<li><a href="data.p1.html">Data management</a></li>
 							<li><a href="publications.html">Publications</a></li>
-							<li><a href="elements.html">C.Vs</a></li>
+							<li><a href="resume.html">C.Vs</a></li>
 						</ul>
 					</nav>
 
@@ -71,27 +71,16 @@
 							</p>
 							<span class="image main"><img src="images/seq.fig1.png" alt="" /></span>
 							<p><b>Whole exon sequencing</b><br>
-								MiSeq, HiSeq 2500, HiSeq 4000, HiSeq X and NovaSeq.
-
-
-								Best practice pipelines are available from <a href="https://github.com/Illumina"> Illumina </a> and 
-								<a href="https://software.broadinstitute.org/gatk/documentation/pipelines.php">GATK4</a><br><br>
-								<a href="https://cnfl.extge.co.uk/display/GERE/Research+Environment+User+Guide">Genomics England</a>
-								<a href="https://jmd.amjpathol.org/article/S1525-1578(18)30256-3/fulltext"> Guidance for Clinical Laboratories</a>
-								
-							superpipeline.py
-Script location:
-module load stampy/1.0.20
-module load python/2.7
-module load samtools/
-
-								
-
-							The pipeline for exon sequencing followed as: Quality control using fastqc, Align BWA, then Stampy, Base quality recalibration using GATK. PICARD – deduplication and
-							coverage metrics using GATK
-								
-							Then an ID Test – 6668 SNPs, Realignment around indels/SNV – position based, MuTECT, Filter step on variants > supported by reads in both directions, mean mapping quality >= 50 and base quality > 26
-							uniquely alignable site for 75bp reads, Copy number - ExomeCNV, Delly- translocation, Indels called with SomaticIndelDetector” in GATK 
+								The whole exons used in all my authored publications were processed using the pipeline outlined below, the pipeline adhered to the best practices at the time.
+								Current best practice pipelines are available from <a href="https://github.com/Illumina"> Illumina </a>,  
+								<a href="https://software.broadinstitute.org/gatk/documentation/pipelines.php">GATK4</a>, 
+								<a href="https://cnfl.extge.co.uk/display/GERE/Research+Environment+User+Guide">Genomics England</a> and
+								<a href="https://jmd.amjpathol.org/article/S1525-1578(18)30256-3/fulltext"> Guidance for Clinical Laboratories</a>.<br><br>
+								Using a "per patient" pipeline, Whole exons were processed in two parts. Raw fastq files from the Tumor Profile Unit (ICR sequencing service) where preprocessed 
+								with filtering of chastity-failing reads, condensed and packaged to a pair  of .gz files. These .gz files are passed onto superpipeline.py with dependencies stampy/1.0.20, python/2.7 and samtools. 
+								The second section of the pipeline performs a SNP query (Bioconductor package - deepSNV) to ensure matching tumour and normal pairs. Followed by realignment of the Bam files.
+								Then MuTect is used to call SNVs together with SnpEff for annotation. A filter was then applied on mapping and aligning quality. Copy number is then inferred by ExomeCNV
+								Translocations are called by Delly. Lastly Indels are called with appropriate filters. 
 														<!-- Table -->
 														<section>
 															Whole exon sequencing pipeline:<br><br>
@@ -171,7 +160,7 @@ module load samtools/
 							</p>
 							<span class="image main"><img src="images/seq.fig3.png" alt="" /></span>
 							<p><b>RNA sequencing.</b><br>
-							I have...
+							edgeR,  Limma and Deseq2 - Under construction !! 
 							</p>
 							<span class="image main"><img src="images/seq.fig4.png" alt="" /></span>
 							<p><b>Methylation sequencing</b><br>

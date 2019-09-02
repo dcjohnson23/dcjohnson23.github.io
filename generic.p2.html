@@ -43,7 +43,7 @@
 							<li><a href="mangement.html">Managerial Experience</a></li>
 							<li><a href="data.p1.html">Data management</a></li>
 							<li><a href="publications.html">Publications</a></li>
-							<li><a href="elements.html">C.Vs</a></li>
+							<li><a href="resume.html">C.Vs</a></li>
 						</ul>
 					</nav>
 
@@ -56,19 +56,19 @@
 							receiving an autologous transplant (younger and fitter) and that did not receive a transplant and received attenuated 
 							induction therapy (older and frailer). This effectively gave eight overlapping treatment arms for which I carried a number of studies to associate clinical outcomes with 
 							biomarkers.<br><br>
-							An apprasial of clinicial demographics and intergrated with available -omics in the subset of patients under consideration is always the first step to any analysis.
-							I would carry out an SQL query to the latest cut of the clinical demographics (over 80-100 variables. depending on coding approach) and place this as dataframe in R. Then merge with data-tables of -omics data in R. Where I would create a complete set
-							with no missing data, by dropping cases, normalising, recoding and/or imputing when appropriate. Imputation that I have previously carrried has been across single
-							data types. Importantly, these data would contain orthologous methods of typing markers, therefore at this point in the analysis, I would find discrepencies and ammend with the appropriate data trail.	
+							An appraisal of clinical demographics and integrated with available -omics in the subset of patients under consideration is always the first step to any analysis.
+							I would carry out an SQL query to the latest cut of the clinical demographics (over 80-100 variables. depending on coding approach) and place this as data-frame in R. Then merge with data-tables of -omics data in R. Where I would create a complete set
+							with no missing data, by dropping cases, normalising, recoding and/or imputing when appropriate. Imputation that I have previously carried has been across single
+							data types. Importantly, these data would contain orthologous methods of typing markers, therefore at this point in the analysis, I would find discrepancies and amend with the appropriate data trail.	
 							I am aware of the progress in tackling these approaches with machine and deep learning, I have been contrasting best performers in "Multi-omics Sample Mislabeling Big Data Challenge" to my previous datasets to understand alternate approaches. 
-							I would typically carry out data visualization of remaining data, followed univariant testing to indentify annomalies. In order to select covariants for modelling I have applied linear (ridge regression, lasso, elastic net) and non-linear regression/classification techniques (e.g. KNN, random and random forest) using R and python packages. I can also translate 
+							I would typically carry out data visualization of remaining data, followed univariant testing to identify annomalies. In order to select covariants for modelling I have applied linear (ridge regression, lasso, elastic net) and non-linear regression/classification techniques (e.g. KNN, random and random forest) using R and python packages. I can also translate 
 							the methods to Scikit-Learn, Keras and Tesorflow 2.O. Importantly I would typically mirror this analysis in independent sets, typically from public databases. Sycnronization of replication sets can be particular challenging as
 							demographics and QC processing information can missing, again typically I will use data visualization and meta-analysis approaches to tackle these issues.    	 
 							</p>
 							<span class="image main"><img src="images/prog.fig1.png" alt="" /></span>
 							<p><b>Bone disease</b><br>
 							Owing to the differences in sensitivity of the radiological methods used to detect MBD, patients were classified as either
-							affected (MBD) or unaffected (no MBD). In the UK cohort, I did this by builting a matrix of all available bone related demographics, that included adjusted
+							affected (MBD) or unaffected (no MBD). In the UK cohort, I did this by building a matrix of all available bone related demographics, that included adjusted
 							serum calcium levels bone surgery, axial or/and vertebral fractures, number of bones lesions in addition to general clinical demographics.
 							MBD was detected using axial survey in My9 and My11, axial skeletal survey (2001–2010) and whole body computed tomography (2011
 							onwards) in German and combined skeletal survey and skeletal computed tomography in US. The frequency of MBD was marginally higher in
@@ -78,7 +78,7 @@
 							<p><b>Survival GWAS</b><br>
 							Survival GWAS are rare in the literature and at the date of publishing, this MM analysis was the largest GWAS survival analysis in the literature at the time. Heterogeneity
 							in the patients group is key hurdle to performing a Survival GWAS. In this analysis there was the advantage that all patient were enrolled in large clinical trials, so that 
-							there was a consistency in treatment across the indivivdual studies, and comprehensive trial standard demographics allowing covariant indenfication. A considerable time was
+							there was a consistency in treatment across the individual studies, and comprehensive trial standard demographics allowing covariant identification. A considerable time was
 							spend on data cleaning, removing patient whose treatment varied from protocol, removal of population outliers. Each trial was modelled separtely due to particular aspects of each trial. 
 							For example, lasso approaches identified age was covariable in the US study, whilst contrast german patient were all young and the impact of age was translation in the treatment covariable.  
 							</p>
