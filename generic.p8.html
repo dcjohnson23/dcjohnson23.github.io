@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>DC Johnson - Sequencing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">David C Johnson - Portfolio</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="mangement.html">Managerial Experience</a></li>
+							<li><a href="data.p1.html">Data management</a></li>
+							<li><a href="publications.html">Publications</a></li>
+							<li><a href="elements.html">C.Vs</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Sequencing</h1>
+							<p><b>Human genome project</b><br>
+								This was my first research position where I carried out restriction digest analysis in BAC, Cosmid and YAC clones for mapping clone to the genome without a reference genome. This involved
+								cell culture, Sub-cloning, and DNA sequencing with 377 and 3700. I then took on a position where I required to use a series of techniques to span
+								difficult-to-clone sequence gaps. Using YACture (a YAC based “Gapture” and Vetorette capture (a PCR based gap capture protocol); 
+								YAC transfer to window strains. YAC transfer to fosmids; Southern blotting and Sub-cloning; YAC or whole/partial chromosome DNA isolation 
+								using rotational PGFE and CHEF. I worked in coordination with sequencing finishing teams. I carried out this gap closure experiments for human
+								chromosomes:   <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16710414 "> chr 1 </a>, 
+								 				<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164053"> chr 9 </a>,
+												<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164054"> chr 10</a>,
+												<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15057823"> chr 13 </a>, 
+												<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=11780052"> chr 20 </a>,
+												 <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15772651"> chr X </a>, and pathogen genomes:
+								 <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15875012"> social amoeba Dictyostelium discoideum </a>,
+								<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16020726"> African trypanosome Trypanosoma brucei </a>,
+								 <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12368867">  Plasmodium falciparum chromosomes 1, 3-9 and 13 </a>. I was introduced to data analysis and bioinformatics at the Sanger,
+								 as state of art bioinformatics courses were regularly put-on at the Hinxton campus and we were encouraged to attend.  
+								   
+							</p>
+							<span class="image main"><img src="images/seq.fig1.png" alt="" /></span>
+							<p><b>Whole exon sequencing</b><br>
+								MiSeq, HiSeq 2500, HiSeq 4000, HiSeq X and NovaSeq.
+
+
+								Best practice pipelines are available from <a href="https://github.com/Illumina"> Illumina </a> and 
+								<a href="https://software.broadinstitute.org/gatk/documentation/pipelines.php">GATK4</a><br><br>
+								<a href="https://cnfl.extge.co.uk/display/GERE/Research+Environment+User+Guide">Genomics England</a>
+								<a href="https://jmd.amjpathol.org/article/S1525-1578(18)30256-3/fulltext"> Guidance for Clinical Laboratories</a>
+								
+							superpipeline.py
+Script location:
+module load stampy/1.0.20
+module load python/2.7
+module load samtools/
+
+								
+
+							The pipeline for exon sequencing followed as: Quality control using fastqc, Align BWA, then Stampy, Base quality recalibration using GATK. PICARD – deduplication and
+							coverage metrics using GATK
+								
+							Then an ID Test – 6668 SNPs, Realignment around indels/SNV – position based, MuTECT, Filter step on variants > supported by reads in both directions, mean mapping quality >= 50 and base quality > 26
+							uniquely alignable site for 75bp reads, Copy number - ExomeCNV, Delly- translocation, Indels called with SomaticIndelDetector” in GATK 
+														<!-- Table -->
+														<section>
+															Whole exon sequencing pipeline:<br><br>
+															<div class="table-wrapper">
+																<table>
+																	<thead>
+																		<tr>
+																			<th>Pipeline part 1 (superpipeline.py)</th>
+																			<th>application</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Quality control</td>
+																			<td>fastqc</td>
+																		</tr>
+																		<tr>
+																			<td>Aligner</td>
+																			<td>BWA and Stampy</td>
+																		</tr>
+																		<tr>
+																			<td>Base quality recalibration</td>
+																			<td>GATK.</td>
+																		</tr>
+																		<tr>
+																			<td>Deduplication</td>
+																			<td>PICARD</td>
+																		</tr>
+																		<tr>
+																			<td>Coverage metrics</td>
+																			<td>GATK</td>
+																		</tr>
+																		<tr>
+																			<th></th>
+																			<td></td>
+																		</tr>
+																		<tr>
+																			<th>Pipeline part 2 (superpipeline2.py)</th>
+																			<th>application</th>
+																		</tr>
+																		<tr>
+																			<td>ID TEST</td>
+																			<td>idtest.snps.R</td>
+																		</tr>
+																		<tr>
+																			<td>Realignment</td>
+																			<td>GATK</td>
+																		</tr>
+																		<tr>
+																			<td>SNVs</td>
+																			<td>MuTECT and SnpEff</td>
+																		</tr>
+																		<tr>
+																		<tr>
+																			<td>Copy number</td>
+																			<td>Control FREEC (formerly ExomeCNV) </td>
+																		</tr>
+																			<td>Translocations</td>
+																			<td>Delly</td>
+																		</tr>
+																		<tr>
+																			<td>Indels</td>
+																			<td>SomaticIndelDetector in GATK</td>
+																		</tr>
+																	</tbody>
+																	<tfoot>
+																		</tr>
+																	</tfoot>
+																</table>
+															</di	
+							</p>
+							<span class="image main"><img src="images/seq.fig2.png" alt="" /></span>
+							<p><b>Sequencing signatures.</b><br>
+							Neutral evolution, mutational signatures and tumour mutational burden (coding variants per mb). Neutral evolution is calculated taking a list of variant allele frequencies (VAF)
+
+
+							</p>
+							<span class="image main"><img src="images/seq.fig3.png" alt="" /></span>
+							<p><b>RNA sequencing.</b><br>
+							I have...
+							</p>
+							<span class="image main"><img src="images/seq.fig4.png" alt="" /></span>
+							<p><b>Methylation sequencing</b><br>
+								a) Methyl-binding domain (MBD) enrichment   b) Chromatin interaction Analysis by Paired-End Tag (ChIA-PET)
+								linux: BedTools, bedGraphToBigWig, liftOver.
+								Rpackages: MEDIPS (bam -> wig), GVIZ.
+ 								</a>
+								</p>
+								<span class="image main"><img src="images/meth.fig4.png" alt="" /></span>
+								<p><b>Programs and packages</b><br>
+								<p><b>References</b><br>
+							<p>◦ Gregory SG, Barlow KF, McLay KE, Kaul R, Swarbreck D, Dunham A, et al. The DNA sequence and biological annotation of human chromosome 1. Nature 2006 May 18; 441(7091): 315-321. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16710414 "> PMID: 16710414 </a> <br><br>
+								◦ Ross MT, Grafham DV, Coffey AJ, Scherer S, McLay K, Muzny D, et al. The DNA sequence of the human X chromosome. Nature 2005 Mar 17; 434(7031): 325-337. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15772651"> PMID: 15772651 </a> <br><br>
+								◦ Eichinger L, Pachebat JA, Glockner G, Rajandream MA, Sucgang R, Berriman M, et al. The genome of the social amoeba Dictyostelium discoideum. Nature 2005 May 5; 435(7038): 43-57. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15875012"> PMID: 15875012 </a> <br><br>
+								◦ Berriman M, Ghedin E, Hertz-Fowler C, Blandin G, Renauld H, Bartholomeu DC, et al. The genome of the African trypanosome Trypanosoma brucei. Science 2005 Jul 15; 309(5733): 416-422. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16020726"> PMID: 16020726 </a> <br><br>
+								◦ Humphray SJ, Oliver K, Hunt AR, Plumb RW, Loveland JE, Howe KL, et al. DNA sequence and analysis of human chromosome 9. Nature 2004 May 27; 429(6990): 369-374. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164053"> PMID: 15164053 </a> <br><br>
+								◦ Dunham A, Matthews LH, Burton J, Ashurst JL, Howe KL, Ashcroft KJ, et al. The DNA sequence and analysis of human chromosome 13. Nature 2004 Apr 1; 428(6982): 522-528. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15057823"> PMID: 15057823 </a> <br><br>
+								◦ Deloukas P, Earthrowl ME, Grafham DV, Rubenfield M, French L, Steward CA, et al. The DNA sequence and comparative analysis of human chromosome 10. Nature 2004 May 27; 429(6990): 375-381. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164054"> PMID: 15164054 </a> <br><br>
+								◦ Hall N, Pain A, Berriman M, Churcher C, Harris B, Harris D, et al. Sequence of Plasmodium falciparum chromosomes 1, 3-9 and 13. Nature 2002 Oct 3; 419(6906): 527-531. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12368867"> PMID: 12368867 </a> <br><br>
+								◦ Deloukas P, Matthews LH, Ashurst J, Burton J, Gilbert JG, Jones M, et al. The DNA sequence and comparative analysis of human chromosome 20. Nature 2001 Dec 20-27; 414(6866): 865-871. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=11780052"> PMID: 11780052 </a> <br><br>
+								
+								◦ Translocations at 8q24 juxtapose MYC with genes that harbor superenhancers resulting in overexpression and poor prognosis in myeloma patients. Walker BA, Wardell CP, Brioli A, Boyle E, Kaiser MF, Begum DB, Dahir NB, Johnson DC, Ross FM, Davies FE, Morgan GJ. Blood Cancer J. 2014 Mar 14;4:e191. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=24632883"> PMID: 24632883 </a> <br><br>
+								◦ Single-cell genetic analysis reveals the composition of initiating clones and phylogenetic patterns of branching and parallel evolution in myeloma. Melchor L, Brioli A, Wardell CP, Murison A, Potter NE, Kaiser MF, Fryer RA, Johnson DC, Begum DB, Hulkki Wilson S, Vijayaraghavan G, Titley I, Cavo M, Davies FE, Walker BA, Morgan GJ. Leukemia. 2014 Aug;28(8):1705-15. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=24480973"> PMID: 24480973 </a> <br><br>
+								◦ APOBEC family mutational signatures are associated with poor prognosis translocations in multiple myeloma. Walker BA, Wardell CP, Murison A, Boyle EM, Begum DB, Dahir NM, Proszek PZ, Melchor L, Pawlyn C, Kaiser MF, Johnson DC, Qiang YW, Jones JR, Cairns DA, Gregory WM, Owen RG, Cook G, Drayson MT, Jackson GH, Davies FE, Morgan GJ. Nat Commun. 2015 Apr 23;6:6997. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25904160"> PMID: 25904160 </a> <br><br> 
+								◦ Mutational Spectrum, Copy Number Changes, and Outcome: Results of a Sequencing Study of Patients With Newly Diagnosed Myeloma. Walker BA, Boyle EM, Wardell CP, Murison A, Begum DB, Dahir NM, Proszek PZ, Johnson DC, Kaiser MF, Melchor L, Aronson LI, Scales M, Pawlyn C, Mirabella F, Jones JR, Brioli A, Mikulasova A, Cairns DA, Gregory WM, Quartilho A, Drayson MT, Russell N, Cook G, Jackson GH, Leleu X, Davies FE, Morgan GJ. J Clin Oncol. 2015 Nov 20;33(33):3911-20. Epub 2015 Aug 17. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> PMID: 26282654 </a> <br><br>
+								◦ Search for rare protein altering variants influencing susceptibility to multiple myeloma. Scales M, Chubb D, Dobbins SE, Johnson DC, Li N, Sternberg MJ, Weinhold N, Stein C, Jackson G, Davies FE, Walker BA, Wardell CP, Houlston RS, Morgan GJ.  Oncotarget. 2017 May 30;8(22):36203-36210. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28404951"> PMID: 28404951 </a> <br><br>
+								◦ The Spectrum and Clinical Impact of Epigenetic Modifier Mutations in Myeloma. Pawlyn C, Kaiser MF, Heuck C, Melchor L, Wardell CP, Murison A, Chavan SS, Johnson DC, Begum DB, Dahir NM, Proszek PZ, Cairns DA, Boyle EM, Jones JR, Cook G, Drayson MT, Owen RG, Gregory WM, Jackson GH, Barlogie B, Davies FE, Walker BA, Morgan GJ. Clin Cancer Res. 2016 Dec 1;22(23):5783-5794. Epub 2016 May 27. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27235425"> PMID: 27235425 </a> <br><br>
+								◦ Genome-wide association study identifies multiple susceptibility loci for multiple myeloma. Mitchell JS, Li N, Weinhold N, Försti A, Ali M, van Duin M, Thorleifsson G, Johnson DC, Chen B, Halvarsson BM, Gudbjartsson DF, Kuiper R, Stephens OW, Bertsch U, Broderick P, Campo C, Einsele H, Gregory WA, Gullberg U, Henrion M, Hillengass J, Hoffmann P, Jackson GH, Johnsson E, Jöud M, Kristinsson SY, Lenhoff S, Lenive O, Mellqvist UH, Migliorini G, Nahi H, Nelander S, Nickel J, Nöthen MM, Rafnar T, Ross FM, da Silva Filho MI, Swaminathan B, Thomsen H, Turesson I, Vangsted A, Vogel U, Waage A, Walker BA, Wihlborg AK, Broyl A, Davies FE, Thorsteinsdottir U, Langer C, Hansson M, Kaiser M, Sonneveld P, Stefansson K, Morgan GJ, Goldschmidt H, Hemminki K, Nilsson B, Houlston RS.  Nat Commun. 2016 Jul 1;7:12050.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27363682"> PMID: 27363682 </a> <br><br>
+								◦ Neutral tumor evolution in myeloma is associated with poor prognosis. Johnson DC, Lenive O, Mitchell J, Jackson G, Owen R, Drayson M, Cook G, Jones JR, Pawlyn C, Davies FE, Walker BA, Wardell C, Gregory WM, Cairns D, Morgan GJ, Houlston RS, Kaiser MF. Blood. 2017 Oct 5;130(14):1639-1643. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410."> PMID: 28827410. </a> <br><br>
+								◦ The genomic landscape of plasma cells in systemic light chain amyloidosis. Boyle EM, Ashby C, Wardell CP, Rowczenio D, Sachchithanantham S, Wang Y, Johnson SK, Bauer MA, Weinhold N, Kaiser MF, Johnson DC, Jones JR, Pawlyn C, Proszek P, Schinke C, Facon T, Dumontet C, Davies FE, Morgan GJ, Walker BA, Wechalekar AD. Blood. 2018 Dec 27;132(26):2775-277. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30446495 "> PMID: 30446495  </a> <br><br> 
+								◦ Jones JR, Weinhold N, Ashby C, Walker BA, Wardell C, Pawlyn C, Rasche L, Melchor L, Cairns DA, Gregory WM, Johnson D, Begum DB, Ellis S, Sherborne AL, Cook G, Kaiser MF, Drayson MT, Owen RG, Jackson GH, Davies FE, Greaves M, Morgan GJ; NCRI Haemato-Oncology CSG. Haematologica. 2019 Jul;104(7):1440-1450. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30733268"> PMID: 30733268 </a> <br><br>
+								◦ Sub-clonal TP53 copy number is associated with prognosis in multiple myeloma. Shah V, Johnson DC, Sherborne AL, Ellis S, Aldridge FM, Howard-Reeves J, Begum F, Price A, Kendall J, Chiecchio L, Savola S, Jenner MW, Drayson MT, Owen RG, Gregory WM, Morgan GJ, Davies FE, Houlston RS, Cook G, Cairns DA, Jackson G, Kaiser MF. Blood. 2018 Oct 29. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30373884"> PMID: 30373884 </a> <br><br> 
+							</div></div></div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	</body>
+</html>
