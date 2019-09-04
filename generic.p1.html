@@ -50,36 +50,46 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>DNA methylation</h1>
+							<h1>DNA methylation biomarkers</h1>
 							
 							<p><b>Background</b><br>
 							Global DNA methylation is strongly characteristic of cell type and can be used to distinguish cells in a biopsy as well as phenotypically differing subtypes. DNA methylation 
 							can be a more stable medium than gene expression with less sensitivity to cell cycle dynamics and nucleic degradation. DNA methylation gives a measure of the stable openness 
 							of genomic regions; thus it measures regulation over time rather than just a snapshot. But although gene-body methylation can give a good proxy for gene expression, DNA methylation 
 							is limited to the measure of genomic accessibility, matched gene expression or protein levels is required to understand how the regulation relates to gene and protein product.<br><br>
-							We can see how cellular characteristics define global DNA methylation through the use of annotated TSNE (t-distributed Stochastic Neighbor Embedding) plots. On the left of the a mixture of cells from the B-cell compartment, the two myeloma 
-							data-sets are shown in the two variations of blue and on the right image the myeloma are colored by subtype/translocation subtype. </p>
+							We can see how cellular characteristics define global DNA methylation through the use of annotated TSNE (t-distributed Stochastic Neighbor Embedding) plots. On the left is plotted a mixture of 
+							DNA methylation profiles from the B-cell compartment, two myeloma data-sets plot distinct from other cells (shown in two variations of blue) and on the right these myeloma are colored by 
+							subtype/translocation subtype. We see global methylation is informative of the chromosomal aberrations present. </p>
 							<span class="image main"><img src="images/meth.fig1.png" alt="" /></span>
 							<p><b>Consensus cluster to define subgroups</b><br>
-							Although similar subtypes plotted together on a TSNE plot, there some partial overlap in subtypes that could indicate further subgroups. In order to encapsulate these further 
+							Although similar primary subtypes plotted together on a TSNE plot, there partial overlap in subtypes that could indicate further subgroups. In order to encapsulate these further 
 							subgroups and additional information imparted on global methylation by other chromosomal aberrations, we derived DNA methylation defined subgroups by consensus clustering.<br><br>
-							Top left is clustering matrix for 10,000 rounds of clustering of 10 groups. Bottom left is Delta area under the curve plot showing an likely maximal informative k=10 (number of groups). A representative cluster of the top differentially methylated probes.	
+							Top left is clustering matrix for 10,000 rounds of clustering of 10 groups. Bottom left is Delta area under the curve plot showing an likely maximal informative k=10 (number of groups). 
+							A representative cluster of the top differentially methylated probes is also shown.	
 							</p>
 							<span class="image main"><img src="images/meth.fig2.png" alt="" /></span>
 							<p><b>Cox proportional models</b><br>
-								Following uni-variant analysis, the remaining factors were investigated by multi-variant analysis and Lasso, and I established the model of Age, gender, Consensus clustering group, and treatment accounting for majority of the global variation.  
-								Potential methods of measure DNA methylation status; Median DNA methylation across gene and promoter; Median DNA methylation across size intervals (RnBeads); Median DNA methylation by functional defined gene domains (RnBeads and UCSC defined); Median DNA methylation by functional domains defined by ChromoHMM; DNA methylation by single probe followed by functional annotation. We tried a number of methods, but each of the methods had the issues defining the discrete DMR, functional domain and phase. The best results came by treating each probe individually in a GWAS fashion following by genomic annotation. I applied Kernel density cut to binarised probes.<br><br>
-								On the left are Kaplan-Meier curves for OS (a) and PFS (c) for intensively treated patients and OS (b) and PFS (d) for older patient for the strongest association probe-set. On the right show forest-plots for high versus low expression across a series of IMID containing trials and non-IMID trials </p>
+							Following uni-variant analysis, the remaining factors were investigated by multi-variant analysis and Lasso to select covariates, and I established the model of Age, gender, 
+							Consensus clustering group, and treatment accounting for majority of the global variation. We tried a number of Potential methods of measure DNA methylation status; Median DNA methylation 
+							across gene and promoter; Median DNA methylation across size intervals (RnBeads); Median DNA methylation by functional defined gene domains (RnBeads and UCSC defined); Median DNA methylation by 
+							functional domains defined by ChromoHMM; DNA methylation by single probe followed by functional annotation. methods, but each of the methods had the issues defining the discrete 
+							DMR, functional domain and phase. The most clearly interpretable results came by treating each probe individually in a GWAS fashion following by genomic annotation. I applied Kernel density
+							cut to binarised probes.<br><br> On the left are Kaplan-Meier curves for OS (a) and PFS (c) for intensively treated patients and OS (b) and PFS (d) for older patient for the strongest association 
+							probe-set. On the right show forest-plots for high versus low expression across a series of IMID containing trials and non-IMID trials </p>
 							<span class="image main"><img src="images/meth.fig3.png" alt="" /></span>
 							<p><b>Genomic annotation</b><br>
-								The top results were for probes proximal to MEIS2 within a lincRNA this was compelling as there is biochemical MEIS2 evidence is an endogenous binding factor for CRBN. IMiDs inhibit MM tumour cells by binding to cereblon (CRBN), instead of endogenous CRBN binding partners such as MEIS2, GS and ZFP91, thereby disrupting the E3 ubiquitin-ligase complex and causing CRBN to degrade neo-substrates including Ikaros family zinc finger proteins 1 (IKZF1) and 3 (IKZF3), casein kinase 1α (CK1α), and the translation termination factor GSPT1.
-								We additionally generated Methyl-binding domain (MBD) based capture data, for 3 t11;14 and 3 t4;14 cases. Plotted together with Paired-End Tag (ChIA-PET) data, for CTCF, RAD21 and RNA Pol2 in GM12878 cell line was downloaded from the Epigenomics gateway, suggested a looping repressive mechanism.
-								.</p>
+							The top results were for probes proximal to MEIS2 within a lincRNA, this was compelling as there is strong biochemical MEIS2 evidence is an endogenous binding factor for CRBN. IMiDs inhibit MM tumour cells 
+							by binding to cereblon (CRBN), instead of endogenous CRBN binding partners such as MEIS2, GS and ZFP91, thereby disrupting the E3 ubiquitin-ligase complex and causing CRBN to degrade neo-substrates 
+							including Ikaros family zinc finger proteins 1 (IKZF1) and 3 (IKZF3), casein kinase 1α (CK1α), and the translation termination factor GSPT1.
+							<br><br>We additionally generated Methyl-binding domain (MBD) based capture data, for three t11;14 and 3 t4;14 cases. Plotted together with Paired-End Tag (ChIA-PET) data, for CTCF, RAD21 and 
+							RNA Pol2 in GM12878 cell line was downloaded from the Epigenomics gateway, suggested a looping repressive mechanism.</p>
 							<span class="image main"><img src="images/meth.fig4.png" alt="" /></span>
+							<p><b>Programs and packages</b><br>
+							Methylation Arrays - minfi (ssNoob, CombineArray, maptoGenome, ratioConvert), RNBeads, ConsensusClusterPlus, Rtsne; Survival analysis - survival, survivalminer, glmnet; MBD-seq - Stampy, BWA, 
+							BedTools, liftOver, MEDIPS and GVIZ; Meta-analysis  - PLINK, META, METAL; Gene expression - GCRMA.
 							<p><b>References</b><br>
-							<p>◦ Johnson DC, Shah V, Sherbourne A, Ellis S, Price A, Owen R, et al. DNA methylation profiling of multiple myeloma trial patients implicates MEIS2 as a determinant of response to immunomodulatory therapy. Submitted 2019</p>
-							<p>◦ Kaiser MF, Johnson DC, Wu P, Walker BA, Brioli A, Mirabella F, et al. Global methylation analysis identifies prognostically important epigenetically inactivated tumor suppressor genes in multiple myeloma. Blood. 2013 Jul 11;122(2):219-26. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=23699600"> PMID: 23699600 </a> <br><br></p> 
-						</div>
+							◦ Johnson DC, Shah V, Sherbourne A, Ellis S, Price A, Owen R, et al. DNA methylation profiling of multiple myeloma trial patients implicates MEIS2 as a determinant of response to immunomodulatory therapy. Submitted 2019</p>
+							◦ Kaiser MF, Johnson DC, Wu P, Walker BA, Brioli A, Mirabella F, et al. Global methylation analysis identifies prognostically important epigenetically inactivated tumor suppressor genes in multiple myeloma. Blood. 2013 Jul 11;122(2):219-26. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=23699600"> PMID: 23699600 </a> <br><br></p> 
 					</div>
 
 				<!-- Footer -->
@@ -107,14 +117,11 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+										<li><a href="@davecj23" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://github.com/dcjohnson23" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://scholar.google.co.uk/citations?user=yidb_JkAAAAJ&hl=en" class="icon brands style2 fa-google"><span class="label">Google</span></a></li>
+										<li><a href="https://linkedin.com/in/david-johnson-ab90033b/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+										<li><a href="davcj23@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">

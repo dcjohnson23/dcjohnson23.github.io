@@ -52,39 +52,55 @@
 						<div class="inner">
 							<h1>Functional studies</h1>
 							<p><b>eQTL</b><br>
-							eQTL analysis was one of the first methods that we used to understand the underlying functional mechanisms of regions associated with <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> Myeloma risk. </a> The difficulty in performing an eQTL in MM is the influence on expression of global hidden co-variants both experimental and biological. In order to correct for such factors,    
-							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22343431"> Probabilistic estimation of expression residuals (PEER) Bayesian Framework </a> - was utilised with known  co-variants (batch, gender, population eigenvector days in post, cell count) and hidden factors. PEER dervived covariants were calculated and applied as co-variants in testing by linear regression with packages such as <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22492648"> MatrixQTL. </a> or  <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26708335"> FastQTL. </a>Subsequently, six independent eQTLs were indentified within the<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30213928"> 23 known risk regions. </a>  A recent follow-up <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31429796 "> transcriptome-wide association study (TWAS) </a> found 13 independent regions the included 108 genes.   <br><br>
-							Top right is strong myeloma eQTL from 180 UK and 660 German matched normal SNP data with myeloma plasma cells expression. Bottom right is a regional plot together with a conditional analysis. Top left is the correlation matrix of PEER dervived cofactors together with known factors. Bottom left is a table of genomewide significant myeloma GWAS association with significant eQTLs in bold. 
-							
-		</p>
+							eQTL analysis was one of the first methods that we used to understand the underlying functional mechanisms of regions associated with <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> 
+							myeloma risk. </a> The difficulty in performing an eQTL in MM is the influence on expression of global hidden co-variants both experimental and biological. In order to correct for such 
+							factors, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22343431"> Probabilistic estimation of expression residuals (PEER) Bayesian Framework </a> - was utilised 
+							with known covariates (batch, gender, population eigenvector days in post, cell count) and hidden factors. PEER derived covariates were calculated and applied as 
+							covariates in testing by linear regression with packages such as <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22492648"> MatrixQTL. </a> or 
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26708335"> FastQTL. </a>Subsequently, six independent eQTLs were identified within the
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30213928"> 23 known risk regions. </a>  A recent follow-up 
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31429796 "> transcriptome-wide association study (TWAS) </a> found 13 independent regions the included 108 genes.<br><br>
+							Top right figure shows a strong myeloma eQTL from 180 UK and 660 German matched normal SNP data with myeloma plasma cells expression. Bottom right is a regional plot together with
+							a conditional analysis. Top left is the correlation matrix of PEER derived cofactors together with known factors. Bottom left is a table of genome-wide significant 
+							myeloma GWAS associations with significant eQTLs in bold. 
+							</p>
 							<span class="image main"><img src="images/func.fig1.png" alt="" /></span>
 							<p><b>CDCA7L-IRF4-MYC</b><br>
-							CDCA7L was the first Myeloma significantly association eQTL linked with a <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> genomewide risk allele. </a> Fine mapping, conditional testing and regulatory annotation with DNase hypersentivity and ChIP-seq tracks confirmed the strongest association was the most likely candidate for the causal region. We
-							next performed luciferase reporter assays to determine the effect of rs4487645 on enhancer activity in the MM cell line KMS11. Transfection of constructs containing the risk G-allele showed
-							significant enhancement of normalized luminescence compared with the T-allele. 3C-qPCR showed that rs4487645 physically interacts with the CDCA7L promoter in GM11992 and KMS11. SiRNA knockdown of IRF4 gave a subsequent lower expressionin CDCA7L. Increased CDCA7L expression was associated with increased cell proliferation and poorer patient survival. CDCA7L knockdown induces cell apoptosis and suppresses cellular proliferation (assesed by FACS using Annexin)  Thus, we demonstrate that through differential IRF4 binding
-							rs4487645 influences expression of c-Myc-interacting CDCA7L.
+							CDCA7L was the first Myeloma significantly association eQTL linked with a <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> genome-wide risk allele. </a> 
+							Fine mapping, conditional testing and regulatory annotation with DNase hypersentivity and ChIP-seq tracks confirmed the strongest association was the most likely 
+							candidate for the causal region. We next performed luciferase reporter assays to determine the effect of rs4487645 on enhancer activity in the MM cell line KMS11. 
+							Transfection of constructs containing the risk G-allele showed significant enhancement of normalized luminescence compared with the T-allele (figure on left). 3C-qPCR showed that
+							rs4487645 physically interacts with the CDCA7L promoter in GM11992 and KMS11. SiRNA knockdown of IRF4 gave a subsequent lower expression in CDCA7L (middle figures). 
+							Increased CDCA7L expression was associated with increased cell proliferation and poorer patient survival. CDCA7L knockdown induces cell apoptosis and suppresses cellular proliferation 
+							as assessed by FACS using Annexin (figures on the right).  Thus, we demonstrate that through differential IRF4 binding rs4487645 influences expression of c-Myc-interacting CDCA7L.
 							</p>
 							<span class="image main"><img src="images/func.fig2.png" alt="" /></span>
 							<p><b>ELL2</b><br>
-								Fine mapping of ELL2 association regiom excluded the present of a rare disease causing coding variant. Statified eQTL and regulatory annotation with DNase hypersentivity and ChIP-seq tracks indicated a chromatin-looping interaction
-								with the ELL2 promoter  and the strongest association. We performed luciferase reporter assays in KMS11. Transfection with constructs containing the
-								rs6877329-C risk allele displayed significantly lower normalized luminescence compared to non-risk G-allele construct (twotailed t test p = 0.006). We performed a electrophoretic
-								mobility shift assay (EMSA) with CEBPB antibody.
-								Here we demonstrated that rs6877329 resides within an enhancer that physically interacts with the ELL2 promoter. The rs6877329-C risk allele reduces enhancer
-								activity and is associated with reduced ELL2 expression in MM patients.
-								</p>
+							Fine mapping of ELL2 association region excluded the present of a rare disease causing coding variant. Stratified eQTL and regulatory annotation with DNase hypersentivity and ChIP-seq tracks indicated a chromatin-looping interaction
+							with the ELL2 promoter and the strongest association (left figure below). We performed luciferase reporter assays in KMS11 . Transfection with constructs containing the
+							rs6877329-C risk allele displayed significantly lower normalized luminescence compared to non-risk G-allele construct (two-tailed t test p = 0.006). We performed a 
+							electrophoretic mobility shift assay (EMSA) with CEBPB antibody (middle figure below). Here we demonstrated that rs6877329 resides within an enhancer that physically interacts 
+							with the ELL2 promoter. SThe rs6877329-C risk allele reduces enhancer activity and is associated with reduced ELL2 expression in myeloma patients. Figure on the right shows effect sizes 
+							of SNPs (used for the HEIDI test) from GWAS meta-analysis plotted against those for SNPs from the respective eQTL study in a summary data-based Mendelian randomization
+							(SMR) analysis.
+							</p>
 							<span class="image main"><img src="images/func.fig3.png" alt="" /></span>
 							<p><b>t11;14 translocation and splicing</b><br>
-							We had showed a variant in CCND1 to be associated with increased risk of <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=23502783"> t11;14 translocation. </a> As the most significant variant is a decribed splice variant, we investigated the impact of the variant one splicing with the MM subgroups. Hyperdiplody and the t11;14 translocation lead to increased CCND1 expression, so in order to cleanly look at the association of the lead variant with abberant splice it was essential to subgroup experiments.</p>
+							We had showed a variant in CCND1 to be associated with increased risk of <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=23502783"> t11;14 translocation. </a> As 
+							the most significant variant is a described splice variant, we investigated the impact of the variant one splicing with the MM subgroups. Hyperdiplody and the t11;14 
+							translocation lead to increased CCND1 expression, so in order to cleanly look at the association of the lead variant with aberrant splice it was essential to subgroup 
+							experiments.</p>
 							<span class="image main"><img src="images/func.fig4.png" alt="" /></span>
-							<p>◦ Transcriptome-wide association study of multiple myeloma identifies candidate susceptibility genes. Went M, Kinnersley B, Sud A, Johnson DC, Weinhold N, Försti A, van Duin M, Orlando G, Mitchell JS, Kuiper R, Walker BA, Gregory WM, Hoffmann P, Jackson GH, Nöthen MM, da Silva Filho MI, Thomsen H, Broyl A, Davies FE, Thorsteinsdottir U, Hansson M, Kaiser M, Sonneveld P, Goldschmidt H, Stefansson K, Hemminki K, Nilsson B, Morgan GJ, Houlston RS. Hum Genomics. 2019 Aug 20;13(1):37. doi: 10.1186/s40246-019-0231-5.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31429796"> PMID: 31429796. </a> <br><br>
-								◦ Genetic Predisposition to Multiple Myeloma at 5q15 Is Mediated by an ELL2 Enhancer Polymorphism. Li N, Johnson DC, Weinhold N, Kimber S, Dobbins SE, Mitchell JS, Kinnersley B, Sud A, Law PJ, Orlando G, Scales M, Wardell CP, Försti A, Hoang PH, Went M, Holroyd A, Hariri F, Pastinen T, Meissner T, Goldschmidt H, Hemminki K, Morgan GJ, Kaiser M, Houlston RS. Cell Rep. 2017 Sep 12;20(11):2556-2564.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28903037"> PMID: 28903037  </a> <br><br>
-								◦ Identification of multiple risk loci and regulatory mechanisms influencing susceptibility to multiple myeloma.
-								◦ Went M, Sud A, Försti A, Halvarsson BM, Weinhold N, Kimber S, van Duin M, Thorleifsson G, Holroyd A, Johnson DC, et al, Nat Commun. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30213928 "> PMID: 30213928 . </a> <br><br>
-								◦ The CCND1 c.870G>A polymorphism is a risk factor for t(11;14)(q13;q32) multiple myeloma. Weinhold N*, Johnson DC*, Chubb D, Chen B, Försti A, Hosking FJ, Broderick P, Ma YP, Dobbins SE, Hose D, Walker BA, Davies FE, Kaiser MF, Li NL, Gregory WA, Jackson GH, Witzens-Harig M, Neben K, Hoffmann P, Nöthen MM, Mühleisen TW, Eisele L, Ross FM, Jauch A, Goldschmidt H, Houlston RS, Morgan GJ, Hemminki K. Nat Genet. 2013 May;45(5):522-525. *These authors contributed equally to this work. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=23502783"> PMID: 23502783 </a> <br><br>
-								◦ Multiple myeloma risk variant at 7p15.3 creates an IRF4-binding site and interferes with CDCA7L expression. Li N, Johnson DC, Weinhold N, Studd JB, Orlando G, Mirabella F, Mitchell JS, Meissner T, Kaiser M, Goldschmidt H, Hemminki K, Morgan GJ, Houlston RS. Nat Commun. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27882933"> PMID: 27882933. </a> <br><br>
-								◦ The 7p15.3 (rs4487645) association for multiple myeloma shows strong allele-specific regulation of the MYC-interacting gene CDCA7L in malignant plasma cells. Weinhold N*, Meissner T*, Johnson DC*, Seckinger A, Moreaux J, Försti A, Chen B, Nickel J, Chubb D, Rawstron AC, Doughty C, Dahir NB, Begum DB, Young K, Walker BA, Hoffmann P, Nöthen MM, Davies FE, Klein B, Goldschmidt H, Morgan GJ, Houlston RS, Hose D, Hemminki K. Haematologica. 2015 Mar;100(3):e110-3. *These authors contributed equally to this work.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> PMID: 25480495. </a> <br><br></p><p>
-						</div>
+							<p><b>Programs and packages</b><br>
+							Association testing - PLINK versions 1.7-1.9, IMPUTE, EIGENSTRAT and SNPTEST; Meta-analysis - PLINK, META, METAL; Data-visualisation - ggplot2, SNAP, matplotlib, seaborn; eQTL and meQTL - matrixQTL, FastQTL and PEER.</p>
+							<p><b>References</b><br>
+							◦ Transcriptome-wide association study of multiple myeloma identifies candidate susceptibility genes. Went M, Kinnersley B, Sud A, Johnson DC, Weinhold N, Försti A, van Duin M, Orlando G, Mitchell JS, Kuiper R, Walker BA, Gregory WM, Hoffmann P, Jackson GH, Nöthen MM, da Silva Filho MI, Thomsen H, Broyl A, Davies FE, Thorsteinsdottir U, Hansson M, Kaiser M, Sonneveld P, Goldschmidt H, Stefansson K, Hemminki K, Nilsson B, Morgan GJ, Houlston RS. Hum Genomics. 2019 Aug 20;13(1):37. doi: 10.1186/s40246-019-0231-5.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31429796"> PMID: 31429796. </a> <br><br>
+							◦ Genetic Predisposition to Multiple Myeloma at 5q15 Is Mediated by an ELL2 Enhancer Polymorphism. Li N, Johnson DC, Weinhold N, Kimber S, Dobbins SE, Mitchell JS, Kinnersley B, Sud A, Law PJ, Orlando G, Scales M, Wardell CP, Försti A, Hoang PH, Went M, Holroyd A, Hariri F, Pastinen T, Meissner T, Goldschmidt H, Hemminki K, Morgan GJ, Kaiser M, Houlston RS. Cell Rep. 2017 Sep 12;20(11):2556-2564.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28903037"> PMID: 28903037  </a> <br><br>
+							◦ Identification of multiple risk loci and regulatory mechanisms influencing susceptibility to multiple myeloma. Went M, Sud A, Försti A, Halvarsson BM, Weinhold N, Kimber S, van Duin M, Thorleifsson G, Holroyd A, Johnson DC, Li N, Orlando G, Law PJ, Ali M, Chen B, Mitchell JS, Gudbjartsson DF, Kuiper R, Stephens OW, Bertsch U, Broderick P, Campo C, Bandapalli OR, Einsele H, Gregory WA, Gullberg U, Hillengass J, Hoffmann P, Jackson GH, Jöckel KH, Johnsson E, Kristinsson SY, Mellqvist UH, Nahi H, Easton D, Pharoah P, Dunning A, Peto J, Canzian F, Swerdlow A, Eeles RA, Kote-Jarai Z, Muir K, Pashayan N, Nickel J, Nöthen MM, Rafnar T, Ross FM, da Silva Filho MI, Thomsen H, Turesson I, Vangsted A, Andersen NF, Waage A, Walker BA, Wihlborg AK, Broyl A, Davies FE, Thorsteinsdottir U, Langer C, Hansson M, Goldschmidt H, Kaiser M, Sonneveld P, Stefansson K, Morgan GJ, Hemminki K, Nilsson B, Houlston RS; PRACTICAL consortium. Nat Commun. 2018 Sep 13;9(1):3707.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30213928"> PMID: 30213928 </a> <br><br>
+							◦ Went M, Sud A, Försti A, Halvarsson BM, Weinhold N, Kimber S, van Duin M, Thorleifsson G, Holroyd A, Johnson DC, et al, Nat Commun. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30213928 "> PMID: 30213928 . </a> <br><br>
+							◦ The CCND1 c.870G>A polymorphism is a risk factor for t(11;14)(q13;q32) multiple myeloma. Weinhold N*, Johnson DC*, Chubb D, Chen B, Försti A, Hosking FJ, Broderick P, Ma YP, Dobbins SE, Hose D, Walker BA, Davies FE, Kaiser MF, Li NL, Gregory WA, Jackson GH, Witzens-Harig M, Neben K, Hoffmann P, Nöthen MM, Mühleisen TW, Eisele L, Ross FM, Jauch A, Goldschmidt H, Houlston RS, Morgan GJ, Hemminki K. Nat Genet. 2013 May;45(5):522-525. *These authors contributed equally to this work. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=23502783"> PMID: 23502783 </a> <br><br>
+							◦ Multiple myeloma risk variant at 7p15.3 creates an IRF4-binding site and interferes with CDCA7L expression. Li N, Johnson DC, Weinhold N, Studd JB, Orlando G, Mirabella F, Mitchell JS, Meissner T, Kaiser M, Goldschmidt H, Hemminki K, Morgan GJ, Houlston RS. Nat Commun. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27882933"> PMID: 27882933. </a> <br><br>
+							◦ The 7p15.3 (rs4487645) association for multiple myeloma shows strong allele-specific regulation of the MYC-interacting gene CDCA7L in malignant plasma cells. Weinhold N*, Meissner T*, Johnson DC*, Seckinger A, Moreaux J, Försti A, Chen B, Nickel J, Chubb D, Rawstron AC, Doughty C, Dahir NB, Begum DB, Young K, Walker BA, Hoffmann P, Nöthen MM, Davies FE, Klein B, Goldschmidt H, Morgan GJ, Houlston RS, Hose D, Hemminki K. Haematologica. 2015 Mar;100(3):e110-3. *These authors contributed equally to this work.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> PMID: 25480495. </a> <br><br></p><p>
 					</div>
 
 				<!-- Footer -->
@@ -112,14 +128,11 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+										<li><a href="@davecj23" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://github.com/dcjohnson23" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://scholar.google.co.uk/citations?user=yidb_JkAAAAJ&hl=en" class="icon brands style2 fa-google"><span class="label">Google</span></a></li>
+										<li><a href="https://linkedin.com/in/david-johnson-ab90033b/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+										<li><a href="davcj23@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">

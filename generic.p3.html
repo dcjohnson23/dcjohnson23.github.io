@@ -52,27 +52,47 @@
 						<div class="inner">
 							<h1>Neutral Evolution</h1>
 							<p><b>Background</b><br>
-								An ICR colleague resurrected the evolutionary theory and married to bulk sequencing data, and argued that some tumour are driven by such strong initial driver, that they evolve neutrally. This approach by <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410"> Sotteriva et al </a>  has been <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30374075"> critiqued </a> in the literature. The practical problem is influence of copy numbers and the stringency of cut off R<sup>2</sup>. It is likely that R<sup>2</sup> needs to be assessed for each tumour type, rather than a definitive threshold. The usefulness of this method for clinical predication is questionable, as tumour is neutrality is measured during a particular time span, clearly changing the environment could change a tumour neutral tendency. The measuer could be used could be used a means to assess how targetabilty of a drug, whether a drug affects a tumour directly or  via the micro environment. 
+							An ICR colleague resurrected the <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26780609">evolutionary theory of neutrality</a> and measured the concept through bulk 
+							sequencing data. Sottoria had showed that some tumours are driven by such strong initial drivers, that they evolve neutrally and are more resistent to forming sub-clones 
+							in response to selectional pressure from the environment. Sottoriva suggested that tumour neutrality could have prognostic importance, we were able to be the first to 
+							investigate this. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410"></a> The approach by 
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26780609"> Sottoriva et al </a> has been <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30374075"> critiqued 
+							</a> in the literature. The practical problem is influence of somatic copy number changes and the stringency of the R<sup>2</sup> cut-off. It is likely that R<sup>2</sup> 
+							needs to be assessed for each tumour type, rather than a definitive threshold for all tumours. The usefulness of this method for clinical predication is questionable, as 
+							tumour neutrality is measured during a particular time span and changing the environment could change a tumour neutral tendency. So that neutral evolution status is a moving target, 
+							and clinicians would be better served taking serial biopsies in order direct therapeutic approaches.  R<sup>2</sup> measure could be used as a means to assess how directly 
+							a drug targets a tumour type, i.e. whether a drug affects a tumour directly or via the micro environment. <br><br>
+							Below is a pictorial representation of examining neutral evolution with bulk sequencing. 
+
 							</p>
 							<span class="image main"><img src="images/neu.fig1.png" alt="" /></span>
 							<p><b>Distribution</b><br>
-							It can be seen in the distribution of sub-clonal mutations below 0.6, there are few sub-clonal mutations, the majority are mutations have a low frequency and can be considered passengers. Looking at cumulative mutations over time. We standard pipeline for the time. Including mutations where the were there were more than 10 reads, with at least 3 mutations. And I only considered samples that had 12 private mutation between a frequency of 0.12 and 2.4. I corrected for copy number and generated a R<sup>2</sup> score.
+							In order to undertake this analysis we used a standard sequencing pipeline for whole exomes. To assess R<sup>2</sup> we calculated the gradient of the distribution of VAF for 
+							cumulative mutations over time. Mutations where considered were there were more than 10 reads, with at least 3 mutations. And we only considered samples that had 12 private 
+							mutations between a frequency of 0.12 and 2.4. We corrected for copy number at each mutation as adjusted and generated a R<sup>2</sup> score. <br><br>
+							It can be seen in the figure beneath, when considering the distribution of sub-clonal mutations below 0.6, the relationship between the number of mutations and average variant 
+							allele frequency (VAF) is linear in neutral samples indicating absence of subclonity.
 							</p>
 							<span class="image main"><img src="images/neu.fig2.png" alt="" /></span>
 							<p><b>Subgroups and mutational signatures</b><br>
-							As expected, neutral tumour signature was seen to be enriched in Myeloma subgroups, where disease transition has been shown to more rapid from the precursor MGUS disease. The numbers were small but I was able to show that micro-environment enriched mutation were more prevalent in the non neutral samples, indicating that these samples were likely to be more micro-environment sensitive.
-
-								</p>
+							As expected, neutral tumour signature was seen to be enriched in myeloma subgroups (figure left), where disease transition has been shown to more rapid from the precursor MGUS disease. 
+							The numbers were small but I was able to show that micro-environment enriched mutations were more prevalent in the non-neutral samples, indicating that these samples were 
+							likely to be more micro-environment sensitive (figure right).
+							</p>
 							<span class="image main"><img src="images/neu.fig3.png" alt="" /></span>
 							<p><b>Survival and response</b><br>
-								Indeed, when we compared OS and PFS in auto treated patients, where the bulk of the tumour is removed we see little difference.
-								Whilst in non-intensively treated patient received IMIDs, where the response to therapy is micro-environment dependent, we do see a difference in outcome. Assessing independent data-sets from MMRF Commpass cancer-register, we see a similar pattern.</p>
+							Indeed, when we compared OS and PFS in auto treated patients where the bulk of the tumour is removed we see little difference. Whilst in non-intensively treated patient 
+							received IMIDs, where the response to therapy is micro-environment dependent, we do see a difference in outcome. Assessing independent data-sets from MMRF Commpass 
+							cancer-register, we see a similar pattern.</p>
 							<span class="image main"><img src="images/neu.fig4.png" alt="" /></span>
-							<p>◦ Neutral tumor evolution in myeloma is associated with poor prognosis. Johnson DC, Lenive O, Mitchell J, Jackson G, Owen R, Drayson M, Cook G, Jones JR, Pawlyn C, Davies FE, Walker BA, Wardell C, Gregory WM, Cairns D, Morgan GJ, Houlston RS, Kaiser MF. Blood. 2017 Oct 5;130(14):1639-1643. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410"> PMID: 28827410. </a> <br><br>
-								◦ Identification of neutral tumor evolution across cancer types. Williams MJ, Werner B, Barnes CP, Graham TA, Sottoriva A. Nature Genetics 2016, Mar;48(3):238-244. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26780609"> PMID: 26780609. </a> <br><br>
-								◦ Neutral tumor evolution? Tarabichi M, Martincorena I, Gerstung M, Leroi AM, Markowetz F et al. Nature Genetics 2018, Dec;50(12):1630-1633. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30374075"> PMID: 30374075. </a> <br><br>
-								◦ Reply to 'Neutral tumor evolution?' Heide T, Zapata L, Williams MJ, Werner B, Caravagna G, Barnes CP. Nature Genetics 2018, Dec;50(12):1633-1637. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30374073"> PMID: 30374073. </a> <br><br></p><p>
-						</div>
+							<p><b>Programs and packages</b><br>
+							Survival analysis - survival, survivalminer, glmnet; Sequencing analysis - SnpEff, Onctotator, MutsigCV, GenVisR; Mutational signatures - deconstructSigs; 
+							Data-visualisation - ggplot2, vioplot, matplotlib, seaborn.</p>
+							<p><b>References</b><br>
+							◦ Neutral tumor evolution in myeloma is associated with poor prognosis. Johnson DC, Lenive O, Mitchell J, Jackson G, Owen R, Drayson M, Cook G, Jones JR, Pawlyn C, Davies FE, Walker BA, Wardell C, Gregory WM, Cairns D, Morgan GJ, Houlston RS, Kaiser MF. Blood. 2017 Oct 5;130(14):1639-1643. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410"> PMID: 28827410. </a> <br><br>
+							◦ Identification of neutral tumor evolution across cancer types. Williams MJ, Werner B, Barnes CP, Graham TA, Sottoriva A. Nature Genetics 2016, Mar;48(3):238-244. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26780609"> PMID: 26780609. </a> <br><br>
+							◦ Neutral tumor evolution? Tarabichi M, Martincorena I, Gerstung M, Leroi AM, Markowetz F et al. Nature Genetics 2018, Dec;50(12):1630-1633. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30374075"> PMID: 30374075. </a> <br><br>
+							◦ Reply to 'Neutral tumor evolution?' Heide T, Zapata L, Williams MJ, Werner B, Caravagna G, Barnes CP. Nature Genetics 2018, Dec;50(12):1633-1637. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30374073"> PMID: 30374073. </a> <br><br></p><p>
 					</div>
 
 				<!-- Footer -->
@@ -100,14 +120,11 @@
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+										<li><a href="@davecj23" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="https://github.com/dcjohnson23" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://scholar.google.co.uk/citations?user=yidb_JkAAAAJ&hl=en" class="icon brands style2 fa-google"><span class="label">Google</span></a></li>
+										<li><a href="https://linkedin.com/in/david-johnson-ab90033b/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+										<li><a href="davcj23@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
