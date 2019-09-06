@@ -22,7 +22,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">David C Johnson - Portfolio</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">DC Johnson - Portfolio</span>
 								</a>
 
 							<!-- Nav -->
@@ -50,37 +50,39 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Sequencing</h1>
-							<p><b>Human genome project</b><br>
-								This was my first research position where I carried out restriction digest analysis in BAC, Cosmid and YAC clones for mapping clone to the genome without a reference genome. This involved
-								cell culture, Sub-cloning, and DNA sequencing with 377 and 3700. I then took on a position where I required to use a series of techniques to span
-								difficult-to-clone sequence gaps. Using YACture (a YAC based “Gapture” and Vetorette capture (a PCR based gap capture protocol); 
-								YAC transfer to window strains. YAC transfer to fosmids; Southern blotting and Sub-cloning; YAC or whole/partial chromosome DNA isolation 
-								using rotational PGFE and CHEF. I worked in coordination with sequencing finishing teams. I carried out this gap closure experiments for human
-								chromosomes:   <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16710414 "> chr 1 </a>, 
-								 				<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164053"> chr 9 </a>,
-												<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164054"> chr 10</a>,
-												<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15057823"> chr 13 </a>, 
-												<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=11780052"> chr 20 </a>,
-												 <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15772651"> chr X </a>, and pathogen genomes:
-								 <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15875012"> social amoeba Dictyostelium discoideum </a>,
-								<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16020726"> African trypanosome Trypanosoma brucei </a>,
-								 <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12368867">  Plasmodium falciparum chromosomes 1, 3-9 and 13 </a>. I was introduced to data analysis and bioinformatics at the Sanger,
-								 as state of art bioinformatics courses were regularly put-on at the Hinxton campus and we were encouraged to attend.  
-								   
+							<h1>Sequencing and Sequencing analysis</h1>
+							<p><b>Sequencing</b><br>
+							This was my first research position where I carried out restriction digest analysis in BAC, cosmid and YAC clones for mapping clones to the genome without an available
+							human reference genome. This involved cell culture, Sub-cloning, and DNA sequencing with 377 and 3700. I then took on a position where I required to use a series of 
+							techniques to span difficult-to-clone sequence gaps. The methods included using YACture (a YAC based “Gapture” and Vetorette capture (a PCR based gap capture protocol); 
+							YAC transfer to window strains. YAC transfer to fosmids; Southern blotting and Sub-cloning; YAC or whole/partial chromosome DNA isolation using rotational PGFE and 
+							CHEF. Although I worked solely on this project, I coordinated my experiments with the sequencing finishing teams. I carried out these gap closure experiments for human chromosomes:
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16710414 "> chr 1 </a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164053"> chr 9 </a>,
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15164054"> chr 10</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15057823"> chr 13 </a>, 
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=11780052"> chr 20 </a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15772651"> chr X </a>, and pathogen genomes:
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15875012"> social amoeba Dictyostelium discoideum </a>,
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16020726"> African trypanosome Trypanosoma brucei </a>,
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12368867"> Plasmodium falciparum chromosomes 1, 3-9 and 13 </a>. I was introduced to data analysis and 
+							bioinformatics at the Sanger Center, which had informatics environment was linux based that included pipeline and restriction digest analysis software. State-of-the-art 
+							practical bioinformatics courses were regularly hosted at the Hinxton campus, we were encouraged to attend and I attended as many as possible.<br><br>
+							I routinely carried out targeted sequencing to confirm experimental results on 3700 and miseq, including a low input ATAC-seq protocol. I have built a low input amplicon custom sequencing panel 
+							of recurrent myeloma mutations and RNA baits based pull down for translocation detection.<br><br>
+							On the left, is the Sequencing team at the Sanger Center, on the left is a cartoon of capture protocols used to span difficult to clone gaps.<br><br>
 							</p>
 							<span class="image main"><img src="images/seq.fig1.png" alt="" /></span>
 							<p><b>Whole exon sequencing</b><br>
-								The whole exons used in all my authored publications were processed using the pipeline outlined below, the pipeline adhered to the best practices at the time.
-								Current best practice pipelines are available from <a href="https://github.com/Illumina"> Illumina </a>,  
-								<a href="https://software.broadinstitute.org/gatk/documentation/pipelines.php">GATK4</a>, 
-								<a href="https://cnfl.extge.co.uk/display/GERE/Research+Environment+User+Guide">Genomics England</a> and
-								<a href="https://jmd.amjpathol.org/article/S1525-1578(18)30256-3/fulltext"> Guidance for Clinical Laboratories</a>.<br><br>
-								Using a "per patient" pipeline, Whole exons were processed in two parts. Raw fastq files from the Tumor Profile Unit (ICR sequencing service) where preprocessed 
-								with filtering of chastity-failing reads, condensed and packaged to a pair  of .gz files. These .gz files are passed onto superpipeline.py with dependencies stampy/1.0.20, python/2.7 and samtools. 
-								The second section of the pipeline performs a SNP query (Bioconductor package - deepSNV) to ensure matching tumour and normal pairs. Followed by realignment of the Bam files.
-								Then MuTect is used to call SNVs together with SnpEff for annotation. A filter was then applied on mapping and aligning quality. Copy number is then inferred by ExomeCNV
-								Translocations are called by Delly. Lastly Indels are called with appropriate filters. 
+							The whole exon sequencing used in all my authored publications were processed using the pipeline outlined below, the pipeline adhered to the best practices at the time.
+							Current best practice pipelines are available from <a href="https://github.com/Illumina"> Illumina </a>,  
+							<a href="https://software.broadinstitute.org/gatk/documentation/pipelines.php">GATK4</a>, 
+							<a href="https://cnfl.extge.co.uk/display/GERE/Research+Environment+User+Guide">Genomics England</a> and
+							<a href="https://jmd.amjpathol.org/article/S1525-1578(18)30256-3/fulltext"> Guidance for Clinical Laboratories</a>.<br><br>
+							Exome capture protocol with RNA baits designed against the human exome with the addition of custom baits that tiled the IGH, IGK, IGL and MYC loci to detect the 
+							primary translocations in myeloma. Using a "per patient" pipeline, Whole exons were processed in two parts. Raw fastq files from the Tumor Profile Unit (ICR 
+							sequencing service) where preprocessed with filtering of chastity-failing reads, condensed and packaged to a pair  of .gz files. These .gz files are passed onto 
+							superpipeline.py with dependencies stampy/1.0.20, python/2.7 and samtools. The second section of the pipeline performs a SNP query (Bioconductor package - deepSNV) 
+							to ensure matching tumour and normal pairs. Followed by realignment of the Bam files. Then MuTect is used to call SNVs together with SnpEff for annotation. A filter 
+							was then applied on mapping and aligning quality. Copy number is then inferred by ExomeCNV. Translocations are called by Delly. Lastly Indels are called by 
+							SomaticIndelDetector in GATK with appropriate filters. 
 														<!-- Table -->
 														<section>
 															Whole exon sequencing pipeline:<br><br>
@@ -136,7 +138,7 @@
 																		<tr>
 																		<tr>
 																			<td>Copy number</td>
-																			<td>Control FREEC (formerly ExomeCNV) </td>
+																			<td>Control FREEC (or ExomeCNV) </td>
 																		</tr>
 																			<td>Translocations</td>
 																			<td>Delly</td>
@@ -150,28 +152,46 @@
 																		</tr>
 																	</tfoot>
 																</table>
-															</di	
-							</p>
+															</div>
 							<span class="image main"><img src="images/seq.fig2.png" alt="" /></span>
+							
+							<p> Whole exon sequencing was used to describe <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22573403">interclonal heterogeneity</a> ,<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=24632883"> MYC translocations breakpoints </a> with AID consensus sequence. This data was also used to
+							assess the prognostic impact of  <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> mutational signature </a>and primary events and <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> SNVs </a>. We also examined<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410"> Neutral evolution </a>
+							, the presence of  <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30768683"> regions of homozygosity </a> and <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28404951"> rare protein altering variants.</a> <br><br></p>
+							
 							<p><b>Sequencing signatures.</b><br>
-							Neutral evolution, mutational signatures and tumour mutational burden (coding variants per mb). Neutral evolution is calculated taking a list of variant allele frequencies (VAF)
+							Neutral evolution, mutational signatures and tumour mutational burden (coding variants per mb) can be derived from whole exome data. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410."> 
+							Neutral evolution </a>is calculated taking a list of variant allele frequencies (VAF). Assessment of R<sup>2</sup> was calculated from gradient of the distribution of VAF for cumulative 
+							mutations over time. Mutations where considered were there were more than 10 reads, with at least 3 mutations. And we only considered samples that had 12 private mutations between a 
+							frequency of 0.12 and 2.4. We corrected for copy number at each mutation as adjusted and generated a R<sup>2</sup> score. Nonnegative matrix factorization (NMF) NMF package in R was used to factorize a matrix of frequency of
+							trinucleotide mutation contexts per sample, to identify underlying mutation signatures among all mutations. The algorithm was run between 2 and 18 underlying signatures, with 10 runs at each number. Two
+							signatures were selected as the optimum number of signatures based around a number of quality control metrics. Mutational signatures were also obtained using the deconstructSigs R sub-routine.<br><br>
 
+							On the left mutational signatures across neutral and non-neutral across translocation defined subgroups. On the right are violin-plots of mutational distributions by translocation subgroups.    
 
 							</p>
 							<span class="image main"><img src="images/seq.fig3.png" alt="" /></span>
 							<p><b>RNA sequencing.</b><br>
-							edgeR,  Limma and Deseq2 - Under construction !! 
+							I have processed and analysed total RNA sequencing data from a set of ~200 patients, I also analysed experimental mRNA-Seq data for hypotheses generating analyses
+							using Deseq2 and edgeR for differential expression or clustering, heat-maps or sample-sample distances. I have then investigated the finding of these experimental 
+							data analyses patient mRNA-Seq for biomarker validation. Testing quantiles or tertiles in terms of subgroups/outcome and generate prognostic curves.<br><br>
+							
+							On the left is a cluster plot of significantly differentially expressed genes from a drug response experiment with triplicates for each cell line. On the right is a volcano plot of
+							log P values and log fold change (FC).
 							</p>
 							<span class="image main"><img src="images/seq.fig4.png" alt="" /></span>
 							<p><b>Methylation sequencing</b><br>
-								a) Methyl-binding domain (MBD) enrichment   b) Chromatin interaction Analysis by Paired-End Tag (ChIA-PET)
-								linux: BedTools, bedGraphToBigWig, liftOver.
-								Rpackages: MEDIPS (bam -> wig), GVIZ.
- 								</a>
-								</p>
-								<span class="image main"><img src="images/meth.fig4.png" alt="" /></span>
-								<p><b>Programs and packages</b><br>
-								<p><b>References</b><br>
+							 I have processed and analysed Methyl-binding domain (MBD) enrichment sequencing. Sequences were aligned to hg19 and de-duplicated using Stampy and BWA, MEDIPS was 
+							 used generate wig from bam files and in annotated in combination with ENCODE or Epigenomics gateway tracks as wig or bed files.<br><br>
+							 
+							 Below is MBD-seq annotated with Chromatin interaction Analysis by Paired-End Tag (ChIA-PET) data from Epigenomics gateway together with ENCODE chromHMM. 
+							
+							 
+						</p>
+							<span class="image main"><img src="images/meth.fig4.png" alt="" /></span> 
+							<p><b>Programs and packages</b><br>
+							Sequencing annotation:BedTools, bedGraphToBigWig, liftOver, MEDIPS, GVIZ; RNA sequencing - Deseq2, edgeR. Mutational signatures - ddeconstructSigs and NMF.
+							<p><b>References</b>
 							<p>◦ Gregory SG, Barlow KF, McLay KE, Kaul R, Swarbreck D, Dunham A, et al. The DNA sequence and biological annotation of human chromosome 1. Nature 2006 May 18; 441(7091): 315-321. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16710414 "> PMID: 16710414 </a> <br><br>
 								◦ Ross MT, Grafham DV, Coffey AJ, Scherer S, McLay K, Muzny D, et al. The DNA sequence of the human X chromosome. Nature 2005 Mar 17; 434(7031): 325-337. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15772651"> PMID: 15772651 </a> <br><br>
 								◦ Eichinger L, Pachebat JA, Glockner G, Rajandream MA, Sucgang R, Berriman M, et al. The genome of the social amoeba Dictyostelium discoideum. Nature 2005 May 5; 435(7038): 43-57. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15875012"> PMID: 15875012 </a> <br><br>
@@ -183,6 +203,7 @@
 								◦ Deloukas P, Matthews LH, Ashurst J, Burton J, Gilbert JG, Jones M, et al. The DNA sequence and comparative analysis of human chromosome 20. Nature 2001 Dec 20-27; 414(6866): 865-871. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=11780052"> PMID: 11780052 </a> <br><br>
 								
 								◦ Translocations at 8q24 juxtapose MYC with genes that harbor superenhancers resulting in overexpression and poor prognosis in myeloma patients. Walker BA, Wardell CP, Brioli A, Boyle E, Kaiser MF, Begum DB, Dahir NB, Johnson DC, Ross FM, Davies FE, Morgan GJ. Blood Cancer J. 2014 Mar 14;4:e191. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=24632883"> PMID: 24632883 </a> <br><br>
+								◦ Intraclonal heterogeneity and distinct molecular mechanisms characterize the development of t(4;14) and t(11;14) myeloma. Walker BA, Wardell CP, Melchor L, Hulkki S, Potter NE, Johnson DC, Fenwick K, Kozarewa I, Gonzalez D, Lord CJ, Ashworth A, Davies FE, Morgan GJ. Blood. 2012 Aug 2;120(5):1077-86. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22573403"> PMID: 22573403</a> <br><br>
 								◦ Single-cell genetic analysis reveals the composition of initiating clones and phylogenetic patterns of branching and parallel evolution in myeloma. Melchor L, Brioli A, Wardell CP, Murison A, Potter NE, Kaiser MF, Fryer RA, Johnson DC, Begum DB, Hulkki Wilson S, Vijayaraghavan G, Titley I, Cavo M, Davies FE, Walker BA, Morgan GJ. Leukemia. 2014 Aug;28(8):1705-15. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=24480973"> PMID: 24480973 </a> <br><br>
 								◦ APOBEC family mutational signatures are associated with poor prognosis translocations in multiple myeloma. Walker BA, Wardell CP, Murison A, Boyle EM, Begum DB, Dahir NM, Proszek PZ, Melchor L, Pawlyn C, Kaiser MF, Johnson DC, Qiang YW, Jones JR, Cairns DA, Gregory WM, Owen RG, Cook G, Drayson MT, Jackson GH, Davies FE, Morgan GJ. Nat Commun. 2015 Apr 23;6:6997. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25904160"> PMID: 25904160 </a> <br><br> 
 								◦ Mutational Spectrum, Copy Number Changes, and Outcome: Results of a Sequencing Study of Patients With Newly Diagnosed Myeloma. Walker BA, Boyle EM, Wardell CP, Murison A, Begum DB, Dahir NM, Proszek PZ, Johnson DC, Kaiser MF, Melchor L, Aronson LI, Scales M, Pawlyn C, Mirabella F, Jones JR, Brioli A, Mikulasova A, Cairns DA, Gregory WM, Quartilho A, Drayson MT, Russell N, Cook G, Jackson GH, Leleu X, Davies FE, Morgan GJ. J Clin Oncol. 2015 Nov 20;33(33):3911-20. Epub 2015 Aug 17. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> PMID: 26282654 </a> <br><br>
