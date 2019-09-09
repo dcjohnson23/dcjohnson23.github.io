@@ -172,8 +172,8 @@
 							</p>
 							<span class="image main"><img src="images/seq.fig3.png" alt="" /></span>
 							<p><b>RNA sequencing.</b><br>
-							I have processed and analysed total RNA sequencing data from a set of ~200 patients, I also analysed experimental mRNA-Seq data for hypotheses generating analyses
-							using Deseq2 and edgeR for differential expression or clustering, heat-maps or sample-sample distances. I have then investigated the finding of these experimental 
+							I have processed and analysed total RNA sequencing data from a set of ~200 patients with TopHat v2.0.11 used for alignment of RNA-seq reads. I also analysed 
+							experimental mRNA-Seq data for hypotheses generating analyses using Deseq2 and edgeR for differential expression or clustering, heat-maps or sample-sample distances. I have then investigated the finding of these experimental 
 							data analyses patient mRNA-Seq for biomarker validation. Testing quantiles or tertiles in terms of subgroups/outcome and generate prognostic curves.<br><br>
 							
 							On the left is a cluster plot of significantly differentially expressed genes from a drug response experiment with triplicates for each cell line. On the right is a volcano plot of
@@ -184,15 +184,29 @@
 							 I have processed and analysed Methyl-binding domain (MBD) enrichment sequencing. Sequences were aligned to hg19 and de-duplicated using Stampy and BWA, MEDIPS was 
 							 used generate wig from bam files and in annotated in combination with ENCODE or Epigenomics gateway tracks as wig or bed files.<br><br>
 							 
-							 Below is MBD-seq annotated with Chromatin interaction Analysis by Paired-End Tag (ChIA-PET) data from Epigenomics gateway together with ENCODE chromHMM. 
+							 Below is MBD-seq annotated with Chromatin interaction Analysis by Paired-End Tag (ChIA-PET) data from Epigenomics gateway together with ENCODE chromHMM.</p> 
+							 <span class="image main"><img src="images/meth.fig4.png" alt="" /></span> 
+							<p><b>Variant annotation</b><br>
+							As a fair proportion of my research consisted of SNP association studies, I have spent considerable time combing variant databases to functionally annotate variants. 
+							When considering coding variants, I initially relied mainly on PolyPhen (chemical disruption) and SIFT (evolutionary tolerance), that now become 
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=23315928"> PolyPhen-2 </a> and <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25851949"> PROVEAN </a>. Non-coding
+							variation was always more difficult to systematically annotate. <br><br>
 							
-							 
+							Functional annotation of association results has made use  of cell type specific tracks regulatory potential inferred from DNase I hypersensitivity (HS), formaldehyde-assisted isolation 
+							of regulatory elements (FAIRE), promoter-/enhancer-associated histone marks and chromatin immuno-precipitation sequencing (ChIP-seq), topological domains (TADs) TADs from 4C experiments 
+							defined by Hi-C intensity from internal sequencing, ENCODE and Epigenomics gateway. Useful databases that utilise such tracks are HaploReg v3, RegulomeDB and 
+							SeattleSeq and I've used these databases for annotating association results across a number manuscripts. <br><br>
+
+							Sequencing pipelines I have used to date have annotated somatic events using both SnpEff and Oncotator, but I have some working knowledge of Annovar, dbNSFP and Variant Effect Predictor 
+							(VEP).
+							
+							As part of the whole exome prognosis papers analyses, I undertook a <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=24487276"> CADD </a>assessment of all SNVs in an alternate approach to define gene and pathway recurrence, the analysis didn't make
+							the final paper, I also considered MutPred, MutationTaster and VEST.
 						</p>
-							<span class="image main"><img src="images/meth.fig4.png" alt="" /></span> 
 							<p><b>Programs and packages</b><br>
-							Sequencing annotation:BedTools, bedGraphToBigWig, liftOver, MEDIPS, GVIZ; RNA sequencing - Deseq2, edgeR. Mutational signatures - ddeconstructSigs and NMF.
-							<p><b>References</b>
-							<p>◦ Gregory SG, Barlow KF, McLay KE, Kaul R, Swarbreck D, Dunham A, et al. The DNA sequence and biological annotation of human chromosome 1. Nature 2006 May 18; 441(7091): 315-321. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16710414 "> PMID: 16710414 </a> <br><br>
+							Sequencing annotation:BedTools, bedGraphToBigWig, liftOver, MEDIPS, GVIZ; RNA sequencing - TopHat, STAR, Deseq2, edgeR. Mutational signatures - VCFtools, deconstructSigs and NMF.
+							<p><b>References</b><br>
+								◦ Gregory SG, Barlow KF, McLay KE, Kaul R, Swarbreck D, Dunham A, et al. The DNA sequence and biological annotation of human chromosome 1. Nature 2006 May 18; 441(7091): 315-321. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16710414 "> PMID: 16710414 </a> <br><br>
 								◦ Ross MT, Grafham DV, Coffey AJ, Scherer S, McLay K, Muzny D, et al. The DNA sequence of the human X chromosome. Nature 2005 Mar 17; 434(7031): 325-337. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15772651"> PMID: 15772651 </a> <br><br>
 								◦ Eichinger L, Pachebat JA, Glockner G, Rajandream MA, Sucgang R, Berriman M, et al. The genome of the social amoeba Dictyostelium discoideum. Nature 2005 May 5; 435(7038): 43-57. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=15875012"> PMID: 15875012 </a> <br><br>
 								◦ Berriman M, Ghedin E, Hertz-Fowler C, Blandin G, Renauld H, Bartholomeu DC, et al. The genome of the African trypanosome Trypanosoma brucei. Science 2005 Jul 15; 309(5733): 416-422. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=16020726"> PMID: 16020726 </a> <br><br>
@@ -213,6 +227,7 @@
 								◦ Genome-wide association study identifies multiple susceptibility loci for multiple myeloma. Mitchell JS, Li N, Weinhold N, Försti A, Ali M, van Duin M, Thorleifsson G, Johnson DC, Chen B, Halvarsson BM, Gudbjartsson DF, Kuiper R, Stephens OW, Bertsch U, Broderick P, Campo C, Einsele H, Gregory WA, Gullberg U, Henrion M, Hillengass J, Hoffmann P, Jackson GH, Johnsson E, Jöud M, Kristinsson SY, Lenhoff S, Lenive O, Mellqvist UH, Migliorini G, Nahi H, Nelander S, Nickel J, Nöthen MM, Rafnar T, Ross FM, da Silva Filho MI, Swaminathan B, Thomsen H, Turesson I, Vangsted A, Vogel U, Waage A, Walker BA, Wihlborg AK, Broyl A, Davies FE, Thorsteinsdottir U, Langer C, Hansson M, Kaiser M, Sonneveld P, Stefansson K, Morgan GJ, Goldschmidt H, Hemminki K, Nilsson B, Houlston RS.  Nat Commun. 2016 Jul 1;7:12050.<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=27363682"> PMID: 27363682 </a> <br><br>
 								◦ Neutral tumor evolution in myeloma is associated with poor prognosis. Johnson DC, Lenive O, Mitchell J, Jackson G, Owen R, Drayson M, Cook G, Jones JR, Pawlyn C, Davies FE, Walker BA, Wardell C, Gregory WM, Cairns D, Morgan GJ, Houlston RS, Kaiser MF. Blood. 2017 Oct 5;130(14):1639-1643. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410."> PMID: 28827410. </a> <br><br>
 								◦ The genomic landscape of plasma cells in systemic light chain amyloidosis. Boyle EM, Ashby C, Wardell CP, Rowczenio D, Sachchithanantham S, Wang Y, Johnson SK, Bauer MA, Weinhold N, Kaiser MF, Johnson DC, Jones JR, Pawlyn C, Proszek P, Schinke C, Facon T, Dumontet C, Davies FE, Morgan GJ, Walker BA, Wechalekar AD. Blood. 2018 Dec 27;132(26):2775-277. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30446495 "> PMID: 30446495  </a> <br><br> 
+								◦ The Novel Protein HSF1 Stress Pathway Inhibitor Bisamide CCT361814 Demonstrates Pre-Clinical Anti-Tumor Activity in Myeloma. Karen Menezes, Grace Aram, Fabio Mirabella, David C Johnson, Amy L Sherborne, Richard S Houlston, Matthew D Cheeseman, Elisa Pasqua, Paul Clarke, Paul Workman, Keith Jones and Martin F Kaiser. Blood 2017 130:3072;
 								◦ Jones JR, Weinhold N, Ashby C, Walker BA, Wardell C, Pawlyn C, Rasche L, Melchor L, Cairns DA, Gregory WM, Johnson D, Begum DB, Ellis S, Sherborne AL, Cook G, Kaiser MF, Drayson MT, Owen RG, Jackson GH, Davies FE, Greaves M, Morgan GJ; NCRI Haemato-Oncology CSG. Haematologica. 2019 Jul;104(7):1440-1450. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30733268"> PMID: 30733268 </a> <br><br>
 								◦ Sub-clonal TP53 copy number is associated with prognosis in multiple myeloma. Shah V, Johnson DC, Sherborne AL, Ellis S, Aldridge FM, Howard-Reeves J, Begum F, Price A, Kendall J, Chiecchio L, Savola S, Jenner MW, Drayson MT, Owen RG, Gregory WM, Morgan GJ, Davies FE, Houlston RS, Cook G, Cairns DA, Jackson G, Kaiser MF. Blood. 2018 Oct 29. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30373884"> PMID: 30373884 </a> <br><br> 
 							</div></div></div>
