@@ -52,22 +52,23 @@
 						<div class="inner">
 							<h1>Functional studies</h1>
 							<p><b>eQTL</b><br>
-							eQTL analysis was one of the first methods that we used to understand the underlying functional mechanisms of regions associated with <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> 
+							eQTL analysis was one of the first approaches that we used to understand the underlying functional mechanisms of regions associated with <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> 
 							myeloma risk. </a> The difficulty in performing an eQTL in MM is the influence on expression of global hidden co-variants both experimental and biological. In order to correct for such 
 							factors, <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22343431"> Probabilistic estimation of expression residuals (PEER) Bayesian Framework </a> - was utilised 
 							with known covariates (batch, gender, population eigenvector days in post, cell count) and hidden factors. PEER derived covariates were calculated and applied as 
 							covariates in testing by linear regression with packages such as <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=22492648"> MatrixQTL. </a> or 
 							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26708335"> FastQTL. </a>Subsequently, six independent eQTLs were identified within the
 							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30213928"> 23 known risk regions. </a>  A recent follow-up 
-							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31429796 "> transcriptome-wide association study (TWAS) </a> found 13 independent regions the included 108 genes.<br><br>
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=31429796 "> transcriptome-wide association study (TWAS)</a> found 13 independent regions the included 108 genes. Identification of 
+							eQTLs/MeQTLs/pQTLs will be important for inferring/imputing phenotypes from large sequencing projects and machine learning approaches will become common, e.g. <a href="https://github.com/broadinstitute/tensorqtl"> tensorflow implementation of FastQTL. </a> <br><br>
 							Top right figure shows a strong myeloma eQTL from 180 UK and 660 German matched normal SNP data with myeloma plasma cells expression. Bottom right is a regional plot together with
-							a conditional analysis. Top left is the correlation matrix of PEER derived cofactors together with known factors. Bottom left is a table of genome-wide significant 
-							myeloma GWAS associations with significant eQTLs in bold. 
+							a conditional analysis. Top left is the correlation matrix of PEER derived co-factors together with known factors. Bottom left is a table of genome-wide significant 
+							myeloma GWAS associations with significant eQTLs in bold. I have been familiarising myself with these approaches with both sequencing and array data. 
 							</p>
 							<span class="image main"><img src="images/func.fig1.png" alt="" /></span>
 							<p><b>CDCA7L-IRF4-MYC</b><br>
-							CDCA7L was the first Myeloma significantly association eQTL linked with a <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> genome-wide risk allele. </a> 
-							Fine mapping, conditional testing and regulatory annotation with DNase hypersentivity and ChIP-seq tracks confirmed the strongest association was the most likely 
+							CDCA7L was the first Myeloma significantly association eQTL linked with a <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=25480495"> genome-wide risk allele.</a> 
+							 Fine mapping, conditional testing and regulatory annotation with DNase hypersentivity and ChIP-seq tracks confirmed the strongest association was the most likely 
 							candidate for the causal region. We next performed luciferase reporter assays to determine the effect of rs4487645 on enhancer activity in the MM cell line KMS11. 
 							Transfection of constructs containing the risk G-allele showed significant enhancement of normalized luminescence compared with the T-allele (figure on left). 3C-qPCR showed that
 							rs4487645 physically interacts with the CDCA7L promoter in GM11992 and KMS11. SiRNA knockdown of IRF4 gave a subsequent lower expression in CDCA7L (middle figures). 
