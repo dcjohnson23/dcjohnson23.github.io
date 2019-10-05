@@ -89,7 +89,7 @@
 							spend on data cleaning, removing patients whose treatment varied from protocol, removal of population outliers. Each trial was modelled separately due to particular aspects of each trial. 
 							For example, lasso approaches identified age as a covariate in the US study, whilst in contrast, the german patients were all young and the impact of age was translated in the treatment 
 							covariate in logistic regression association tests with genotypes. <br><br>
-							Below, on the right is the clinical characteristics of the Survival GWAS study, on the left is the association results for sentinel SNP at 6q25 along with Kaplan-meier curves
+							Below, on the right is the clinical characteristics of the Survival GWAS study, on the left is the association results for sentinel SNP at 6q25 along with Kaplan-Meier curves
 							for each patient cohort.
 					
 
@@ -97,29 +97,29 @@
 							<span class="image main"><img src="images/prog.fig3.png" alt="" /></span>
 							<p><b>Exon sequencing prognosis</b><br>
 							The difficulty in assessing prognosis in Cancer sequencing studies treatment heterogeneity and the complexity of chromosomal aberrations we sort to examine this in two linked 
-							analysis, the first focused on <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> mutational signature </a>and primary events and second focused on 
-							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> SNVs </a>. In the first manuscript we show outcomes to be influenced by not only primary translocations, 
+							analysis, the first focused on <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> mutational-signatures </a>and primary events and second focused on 
+							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=26282654"> SNVs</a>. In the first manuscript, we showed outcomes to be influenced by not only primary translocations, 
 							but also secondary MYC translocations, global effects such kataegis and an APOBEC mutational signature. In the second analysis the correlation between mutated genes 
-							and cytogenetic abnormalities was determined using Bayesian inference with JAGS and the R-based Bayesmed. All somatic events were annotated using both SnpEff and Oncotator. 
+							and cytogenetic abnormalities were determined using Bayesian inference with JAGS and the R-based Bayesmed. All somatic events were annotated using both SnpEff and Oncotator. 
 							Recurrently mutated genes with defined and selected prognostic analyses using MutsigCV. Mutations Differences between survival functions were tested using the log-rank 
 							test. Hazard ratios (HRs) were estimated from Cox proportional hazard regression. Multi-variable stepwise variable selection was performed using a standard backward-elimination 
 							approach.<br><br>
-							Below, on the right shows mutational signature distribution across all samples and the survival impact of APOBEC mutational signature enriched in cluster B. On the left
-							show univariate results and combined survival results when grouping high risk chromosomal legions.</p>
+							Below, on the right shows the mutational signature distribution across all samples and the survival impact of APOBEC mutational signature enriched in cluster B. On the left
+							show univariate results and combined survival results when grouping high-risk chromosomal legions.</p>
 							<span class="image main"><img src="images/prog.fig4.png" alt="" /></span>								
 							
 							<p><b>TP53 copy number assessment by MLPA</b><br>
-							We had previously presented an integrated outcome analysis of <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28584253"> copy number status by molecular ligation probe assay (MLPA) and exon sequencing </a>.
-							In a follow-on analysis focussed on <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30373884"> TP53 </a>, we examined series of thresholds for TP53 deletion status using three alternate methods: C-statistics for risk prediction models with censored survival data, classic multi-variant analysis, and ROC assessment.</p>
+							We had previously presented an integrated outcome analysis of <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28584253"> copy number status by molecular ligation probe assay (MLPA) and exon sequencing</a>.
+							In a follow-on analysis focussed on <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=30373884"> TP53</a>, we examined series of thresholds for TP53 deletion status using three alternate methods: C-statistics for risk prediction models with censored survival data, classic multi-variant analysis, and ROC assessment.</p>
 							
-							Here on left we show the impact of outcome with varying TP53 deletion cut offs, modelling ROC over time allow us to assess the functional behaviour of lesion cut off thresholds.  On the right shows the relationship 
+							Here on left, we show the impact of outcome with varying TP53 deletion cut-offs, modeling ROC over time allows us to assess the functional behavior of lesion cut off thresholds.  On the right shows the relationship 
 							between subclonal and clonal TP53 deletion and clinical and genetic characteristics of myeloma. 
 							<span class="image main"><img src="images/prog.fig5.png" alt="" /></span>
 							<p><b>WGS sequencing prognosis</b><br>
 							An approach I have considered to link prognostic questions to WGS would be to infer eQTL or meQTL/pQTL supported Mendelian randomization instrumental variables (IVs)  to model transcription and translational 
 							output from each WGS profile to give a relative functional output for each gene for each patient. Thresholds for functional output per gene could be binarised (statistical or/and by approximating to known functional evidence)  
-							and used interrogate survival outcome and response. Using disease type or subtype (inferred from the global subtype signatures, by considered inferred transcription or translation combined), together with appropriate clinical 
-							demographics (age, gender, disease stage, etc, would allow single gene survival outcome to calculated. Scaling to pathways to consider particular targeted therapies would also be possible with this approach. 
+							and used interrogate survival outcomes and responses. Using disease type or subtype (inferred from the global subtype signatures, by considered inferred transcription or translation combined), together with appropriate clinical 
+							demographics (age, gender, disease stage, etc, would allow single gene survival outcomes to assessed. Scaling to pathways to consider particularly targeted therapies would also be possible with this approach. 
 						
 									<p><b>Programs and packages</b><br>
 								Covariate selection - glmnet, dygraphs, rpart, statisticalModeling, survivalROC, PyPI, PYyMC3 and NetworkX; Association testing - PLINK versions 1.7, 1.8 and 1.9 and SNPTEST; Meta-analysis - PLINK, META, METAL; Machine learning - glmnet, recipes, XGBoost, caret, Scikit-Learn, Keras and Tesorflow 2.0.
