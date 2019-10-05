@@ -63,30 +63,31 @@
 							recoding and/or imputing when appropriate. I've typically imputed across single data types. Importantly, these data would contain orthologous methods of typing markers, 
 							therefore at this point in the analysis, I would find discrepancies and amend with the appropriate data trail. I am aware of the progress in tackling these approaches 
 							with machine and deep learning, I have been contrasting best performers in "Multi-Omics Sample Mislabeling Big Data Challenge" to my previous datasets to understand 
-							alternate approaches i.e. Spike-and-Slab Lasso Generalized Linear Models. I would typically carry out data visualization of the remaining data, followed by univariate cox analyses to identify anomalies. In order to select covariates 
-							for modelling I have previously applied linear (ridge regression, lasso, elastic net) and non-linear regression/classification techniques (e.g. KNN, random and random forest) using 
-							R (glmnet and XG Boost) and python (SciPy) packages. I can also translate these approaches to Scikit-Learn, Keras and Tesorflow 2.0, especially important for non-linear models. 
-							I would typically mirror this analysis in independent sets, generally from public databases. Synchronization of replication sets can be particular challenging as demographics and 
-							QC processing information can missing, again typically I will use data visualization and meta-analysis approaches to tackle these issues. <br><br>
-							Below, are consort diagrams for myeloma IX (left) and myeloma XI, both contain maintenance arms, the effects of which was also considered in analyses.  	 
+							alternate approaches i.e. Spike-and-Slab Lasso Generalized Linear Models. I would typically carry out data visualization of the remaining data, followed by univariate cox analyses
+							to identify anomalies. In order to select covariates for modeling I have previously applied linear (ridge regression, lasso, elastic net) and non-linear regression/classification 
+							techniques (e.g. KNN, random and random forest) using R (glmnet and XG Boost) and python (SciPy) packages. I can also translate these approaches to Scikit-Learn, Keras and 
+							Tesorflow 2.0, especially important for non-linear models. I would typically mirror this analysis in independent sets, generally from public databases. Synchronization of replication 
+							sets can be particularly challenging as demographics and QC processing information can missing, again typically I will use data visualization and meta-analysis approaches to tackle these 
+							issues. <br><br>
+							Below, are consort diagrams for myeloma IX (left) and myeloma XI, both contain maintenance arms, the effects of which were also considered in analyses.  	 
 							</p>
 							<span class="image main"><img src="images/prog.fig1.png" alt="" /></span>
 							<p><b>Bone disease</b><br>
 							Owing to the differences in sensitivity of the radiological methods used to detect MBD, patients were classified as either
-							affected (MBD) or unaffected (no MBD). In the UK cohort, I did this by building a matrix of all available bone related demographics, that included adjusted
+							affected (MBD) or unaffected (no MBD). In the UK cohort, I did this by building a matrix of all available bone-related demographics, that included adjusted
 							serum calcium levels bone surgery, axial or/and vertebral fractures, number of bones lesions in addition to general clinical demographics.
-							MBD was detected using axial survey in My9 and My11, axial skeletal survey (2001–2010) and whole body computed tomography (2011
-							onwards) in German and combined skeletal survey and skeletal computed tomography in US. The frequency of MBD was marginally higher in
+							MBD was detected using axial survey in My9 and My11, axial skeletal survey (2001–2010) and whole-body computed tomography (2011
+							onwards) in German and combined skeletal survey and skeletal computed tomography in the US. The frequency of MBD was marginally higher in
 							the HdB cohort, perhaps surprisingly age was not significantly associated with MBD in any of the four cohorts.<br><br>
 							Below, on the right is a breakdown of the datasets and analyses of the bone disease GWAS study with the clinical characteristics on the left.
 							</p>
 							<span class="image main"><img src="images/prog.fig2.png" alt="" /></span>
 							<p><b>Survival GWAS</b><br>
-							Survival GWAS are rare in the literature and at the date of publishing, this MM analysis was the largest GWAS survival analysis in the literature at the time. Heterogeneity
-							in the patients group is key hurdle to performing a Survival GWAS. In this analysis there was the advantage that all patient were enrolled in large clinical trials, so that 
-							there was a consistency in treatment across the individual studies, and comprehensive trial standard demographics allowing covariant identification. A considerable time was
-							spend on data cleaning, removing patient whose treatment varied from protocol, removal of population outliers. Each trial was modelled separately due to particular aspects of each trial. 
-							For example, lasso approaches identified age was covariate in the US study, whilst in contrast the german patients were all young and the impact of age was translated in the treatment 
+							Survival GWAS reports are rare in the literature and at the date of publishing, this MM analysis was the largest GWAS survival analysis in the literature at the time. Heterogeneity
+							in the patients-group is a key hurdle to performing a Survival GWAS. In this analysis, there was the advantage that all patients was enrolled in large clinical trials, so that 
+							there was a consistency in treatment across the individual studies, and comprehensive trial standard demographics allowing covariant identification. Considerable time was
+							spend on data cleaning, removing patients whose treatment varied from protocol, removal of population outliers. Each trial was modelled separately due to particular aspects of each trial. 
+							For example, lasso approaches identified age as a covariate in the US study, whilst in contrast, the german patients were all young and the impact of age was translated in the treatment 
 							covariate in logistic regression association tests with genotypes. <br><br>
 							Below, on the right is the clinical characteristics of the Survival GWAS study, on the left is the association results for sentinel SNP at 6q25 along with Kaplan-meier curves
 							for each patient cohort.
