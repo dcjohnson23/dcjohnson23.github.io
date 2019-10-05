@@ -65,9 +65,9 @@
 							<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=12368867"> Plasmodium falciparum chromosomes 1, 3-9 and 13 </a>. I was introduced to data analysis and 
 							bioinformatics at the Sanger Center, which had informatics environment was linux based that included pipeline and restriction digest analysis software. State-of-the-art 
 							practical bioinformatics courses were regularly hosted at the Hinxton campus, we were encouraged to attend and I attended as many as possible.<br><br>
-							I routinely carried out targeted sequencing to confirm experimental results on 3700 and miseq, including a low input ATAC-seq protocol. I have built a low input amplicon custom sequencing panel 
-							of recurrent myeloma mutations and RNA baits based pull down for translocation detection.<br><br>
-							On the left, is the Sequencing team at the Sanger Center, on the left is a cartoon of capture protocols used to span difficult to clone gaps.<br><br>
+							I routinely carried out targeted sequencing to confirm experimental results on 3700 and MiSeq, including a low input ATAC-seq protocol. I have built a low input amplicon custom sequencing panel 
+							of recurrent myeloma mutations and RNA baits based pull-down for translocation detection.<br><br>
+							On the left, is the Sequencing team at the Sanger Center, on the left, is a cartoon of capture protocols used to span difficult to clone gaps.<br><br>
 							</p>
 							<span class="image main"><img src="images/seq.fig1.png" alt="" /></span>
 							<p><b>Whole exon sequencing</b><br>
@@ -78,10 +78,10 @@
 							<a href="https://jmd.amjpathol.org/article/S1525-1578(18)30256-3/fulltext"> Guidance for Clinical Laboratories</a>.<br><br>
 							Exome capture protocol with RNA baits designed against the human exome with the addition of custom baits that tiled the IGH, IGK, IGL and MYC loci to detect the 
 							primary translocations in myeloma. Using a "per patient" pipeline, Whole exons were processed in two parts. Raw fastq files from the Tumor Profile Unit (ICR 
-							sequencing service) where preprocessed with filtering of chastity-failing reads, condensed and packaged to a pair  of .gz files. These .gz files are passed onto 
+							sequencing service) where preprocessed with filtering of chastity-failing reads, condensed and packaged to a pair of .gz files. These .gz files are passed onto 
 							superpipeline.py with dependencies stampy/1.0.20, python/2.7 and samtools. The second section of the pipeline performs a SNP query (Bioconductor package - deepSNV) 
 							to ensure matching tumour and normal pairs. Followed by realignment of the Bam files. Then MuTect is used to call SNVs together with SnpEff for annotation. A filter 
-							was then applied on mapping and aligning quality. Copy number is then inferred by ExomeCNV. Translocations are called by Delly. Lastly Indels are called by 
+							was then applied on mapping and aligning quality. Copy number is then inferred by ExomeCNV. Translocations are called by Delly. Lastly, Indels are called by 
 							SomaticIndelDetector in GATK with appropriate filters. 
 														<!-- Table -->
 														<section>
@@ -162,8 +162,8 @@
 							<p><b>Sequencing signatures.</b><br>
 							Neutral evolution, mutational signatures and tumour mutational burden (coding variants per mb) can be derived from whole exome data. <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=28827410."> 
 							Neutral evolution </a>is calculated taking a list of variant allele frequencies (VAF). Assessment of R<sup>2</sup> was calculated from gradient of the distribution of VAF for cumulative 
-							mutations over time. Mutations where considered were there were more than 10 reads, with at least 3 mutations. And we only considered samples that had 12 private mutations between a 
-							frequency of 0.12 and 2.4. We corrected for copy number at each mutation as adjusted and generated a R<sup>2</sup> score. Nonnegative matrix factorization (NMF) NMF package in R was used to factorize a matrix of frequency of
+							mutations over time. Mutations were considered where there were coverage of more than 10 reads with at least 3 mutations. And we only considered samples that had 12 private mutations between a 
+							frequency of 0.12 and 2.4. We corrected for copy number at each mutation as adjusted and generated a R<sup>2</sup> score. Nonnegative matrix factorization (NMF) NMF package in R was used to factorize a matrix of the frequency of
 							trinucleotide mutation contexts per sample, to identify underlying mutation signatures among all mutations. The algorithm was run between 2 and 18 underlying signatures, with 10 runs at each number. Two
 							signatures were selected as the optimum number of signatures based around a number of quality control metrics. Mutational signatures were also obtained using the deconstructSigs R sub-routine.<br><br>
 
